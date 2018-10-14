@@ -1,5 +1,7 @@
 # 1.    Multiples of 3 and 5
 # Find the sum of all the multiples of 3 or 5 below 1000.
+
+
 def multiple3and5():
     numbers = range(1, 1000)
     res = 0
@@ -8,13 +10,17 @@ def multiple3and5():
             res += num
 
     return res
+
+
 print("Multiple of 3 and 5:" + str(multiple3and5()) )
 
 
 # 2. Even Fibonacci numbers
 # By considering the terms in the Fibonacci sequence 
 # whose values do not exceed four million, find the sum of the even-valued terms.
-def fibonacciEvenSum(maxNum):
+
+
+def fibonacci_even_sum(maxNum):
     num1 = 1
     num2 = 2
 
@@ -31,11 +37,13 @@ def fibonacciEvenSum(maxNum):
         num2 = num3
 
     return sum
-#print("Even Sum is: " + str(fibonacciEvenSum(4000000)))
+# print("Even Sum is: " + str(fibonacci_even_sum(4000000)))
 
 # 3. Largest Prime Number
 # What is the largest prime factor of the number 600851475143 ?
-def isPrime(num):
+
+
+def is_prime(num):
     if num > 1:
         n = round(num / 2) + 1
         for i in range(2,n):
@@ -44,18 +52,20 @@ def isPrime(num):
         return True
     return False
 
-def largestPrime(number):
+
+def largest_prime(number):
     max = 0
     for i in range(2, number):
         if number % i == 0:
-            if isPrime(i):
+            if is_prime(i):
                 if max < i:
                     max = i
                     print(max)
     return max
 
-#print(largestPrime(13195))
-#print(largestPrime(600851475143))
+
+# print(largest_prime(13195))
+# print(largest_prime(600851475143))
 # it took a long time to run this
 
 
@@ -66,7 +76,8 @@ def largestPrime(number):
 def reverse(s):
     return s[::-1]
 
-def isPalindrome(s):
+
+def is_palindrome(s):
     # Calling reverse function
     rev = reverse(s)
 
@@ -75,7 +86,8 @@ def isPalindrome(s):
         return True
     return False
 
-def findlargestPalindrome():
+
+def find_largest_palindrome():
     max1 = 0
     max2 = 0
     palindMax = 0
@@ -83,7 +95,7 @@ def findlargestPalindrome():
         for j in range(i, 100, -1):
             num = i*j
             if num > palindMax:
-                if isPalindrome(str(num)):
+                if is_palindrome(str(num)):
                     max1 = i
                     max2 = j
                     palindMax = num
@@ -91,11 +103,13 @@ def findlargestPalindrome():
     print(max2)
     return palindMax
 
-#print(findlargestPalindrome())
+# print(find_largest_palindrome())
 
 # 5. Smallest multiple
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-def smallestMultiple():
+
+
+def smallest_multiple():
     ok = 1
     num = 2
     while ok == 1:
@@ -109,7 +123,7 @@ def smallestMultiple():
 
     return num
 
-#print(smallestMultiple())
+# print(smallest_multiple())
 
 
 
